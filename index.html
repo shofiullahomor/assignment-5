@@ -36,18 +36,17 @@
         </div>
         <div class="flex justify-between">
           <img src="./assets/coin.png" alt="" />
-          <p class="ml-4 text-2xl font-bold">5500 BDT</p>
+          <p class="ml-4 text-2xl font-bold" id="reserve-amount">5500 BDT</p>
         </div>
+      </div>
+      <div class="flex gap-3 align-middle justify-center">
+        <button class="bg-lime-300 px-8 btn" id="donation-tab">Donation</button>
+        <button class="outline-1 px-8 btn" id="history-tab">History</button>
       </div>
     </nav>
 
     <!-- nav end -->
-    <main class="mt-20 mb-8 container mx-auto">
-      <div class="flex align-middle justify-center">
-        <button class="bg-lime-300 px-8 btn">Donation</button>
-        <button class="outline-1 px-8 btn">History</button>
-      </div>
-
+    <main id="donate-sections" class="mt-20 mb-8 container mx-auto">
       <section class="flex justify-between gap-10 border rounded-xl m-5">
         <div class="w-6/12">
           <img class="w-11/12 m-5" src="./assets/noakhali.png" alt="" />
@@ -79,13 +78,35 @@
           <p>
             <button
               class="w-full bg-lime-300 px-8 py-5 rounded-xl text-3xl font-bold"
+              onclick="my_modal_5.showModal()"
               id="donate-btn"
             >
               Donate Now
             </button>
           </p>
+          <!-- modal start -->
+
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col justify-center items-center">
+              <h3 class="text-4xl font-bold">Congrates!</h3>
+              <img class="w-12 h-12 m-10" src="./assets/coin.png" alt="" />
+              <p class="py-4">You Have Donated for Humankind</p>
+              <h1 class="font-bold text-2xl">Successfully</h1>
+
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+          <!-- modal end -->
         </div>
       </section>
+
+      <!-- 2nd card start -->
+
       <section class="flex justify-between gap-10 border rounded-xl m-5">
         <div class="w-6/12">
           <img class="w-11/12 m-5" src="./assets/feni.png" alt="" />
@@ -95,7 +116,7 @@
             class="flex justify-center items-center gap-2 px-5 bgc w-28 h-8 rounded-lg"
           >
             <img src="./assets/coin.png" alt="" />
-            <span>0</span>BDT
+            <span id="previous-amount-1">0</span>BDT
           </button>
           <h1 class="text-3xl font-bold my-5">
             Donate for Flood Relief in Feni,Bangladesh
@@ -109,19 +130,23 @@
             need.
           </p>
           <input
+            id="donate-amount-1"
             class="w-full border px-8 py-5 rounded-xl text-3xl font-bold my-8"
             placeholder="write donation amount"
             type="text"
           />
           <p>
             <button
+              onclick="my_modal_5.showModal()"
               class="w-full bg-lime-300 px-8 py-5 rounded-xl text-3xl font-bold"
+              id="donate-btn-1"
             >
               Donate Now
             </button>
           </p>
         </div>
       </section>
+      <!-- 3rd cart start -->
       <section class="flex justify-between gap-10 border rounded-xl m-5">
         <div class="w-6/12">
           <img class="w-11/12 m-5" src="./assets/quota-protest.png" alt="" />
@@ -131,7 +156,7 @@
             class="flex justify-center items-center gap-2 px-5 bgc w-28 h-8 rounded-lg"
           >
             <img src="./assets/coin.png" alt="" />
-            <span>0</span>BDT
+            <span id="previous-amount-2">0</span>BDT
           </button>
           <h1 class="text-3xl font-bold my-5">
             Aid for Injured in the Quota Movement
@@ -145,13 +170,16 @@
             need.
           </p>
           <input
+            id="donate-amount-2"
             class="w-full border px-8 py-5 rounded-xl text-3xl font-bold my-8"
             placeholder="write donation amount"
             type="text"
           />
           <p>
             <button
+              onclick="my_modal_5.showModal()"
               class="w-full bg-lime-300 px-8 py-5 rounded-xl text-3xl font-bold"
+              id="donate-btn-2"
             >
               Donate Now
             </button>
@@ -190,6 +218,13 @@
       </section>
       <!-- accordian end -->
     </main>
+
+    <!-- history section -->
+    <div id="history-section" class="hidden min-h-screen">
+      <div id="history-list" class="container mx-auto rounded-xl my-5"></div>
+    </div>
+
+    <!-- footer section -->
     <footer class="h-32 bg-slate-300"></footer>
     <script src="./js/donate.js"></script>
   </body>
