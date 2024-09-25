@@ -24,36 +24,57 @@
   <body>
     <!-- nav start -->
     <nav
-      class="sticky top-0 z-10 bg-slate-200 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b"
+      class="sticky top-0 z-10 bg-slate-200 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b mt-2"
     >
-      <div class="py-8 container mx-auto border-gray-200 flex justify-between">
-        <div class="">
-          <a class="btn btn-ghost text-xl bg-lime-300 px-8">Blog</a>
+      <div
+        class="py-1 lg:py-8 container mx-auto border-gray-200 flex justify-between"
+      >
+        <div class="" id="blog-page">
+          <a class="btn btn-ghost text-xl bg-lime-300 lg:px-8">Blog</a>
         </div>
         <div class="hidden lg:flex">
           <img class="" src="./assets/logo.png" alt="" />
-          <h1 class="ml-4 text-2xl font-bold">Donate Bangladesh</h1>
+          <h1 class="lg:ml-4 text-xl lg:text-2xl font-bold">
+            Donate Bangladesh
+          </h1>
         </div>
-        <div class="flex justify-between">
+        <div class="flex">
           <img src="./assets/coin.png" alt="" />
-          <p class="ml-4 text-2xl font-bold" id="reserve-amount">5500 BDT</p>
+          <span class="ml-4 text-2xl font-bold" id="reserve-amount">5500</span>
+          <span class="text-2xl font-bold ml-1">BDT </span>
         </div>
       </div>
-      <div class="flex gap-3 align-middle justify-center">
-        <button class="bg-lime-300 px-8 btn" id="donation-tab">Donation</button>
-        <button class="outline-1 px-8 btn" id="history-tab">History</button>
+      <div class="flex gap-3 align-middle justify-center lg:my-5">
+        <button
+          class="bg-lime-300 px-8 btn text-black font-bold text-xl"
+          id="donation-tab"
+        >
+          Donation
+        </button>
+        <button
+          class="outline-1 px-8 btn text-black font-bold text-xl"
+          id="history-tab"
+        >
+          History
+        </button>
       </div>
     </nav>
 
     <!-- nav end -->
-    <main id="donate-sections" class="mt-20 mb-8 container mx-auto">
-      <section class="flex justify-between gap-10 border rounded-xl m-5">
-        <div class="w-6/12">
-          <img class="w-11/12 m-5" src="./assets/noakhali.png" alt="" />
+    <main id="donate-sections" class="lg:mt-20 mb-8 container mx-auto">
+      <section
+        class="flex flex-col lg:flex-row lg:justify-between gap-10 border rounded-xl lg:m-5"
+      >
+        <div class="w-full lg:w-6/12">
+          <img
+            class="w-full lg:w-11/12 m-1 lg:m-5"
+            src="./assets/noakhali.png"
+            alt=""
+          />
         </div>
-        <div class="w-6/12 m-5">
+        <div class="lg:w-6/12 lg:m-5 w-full">
           <button
-            class="flex justify-center items-center gap-2 px-5 bgc w-28 h-8 rounded-lg"
+            class="flex justify-center items-center gap-2 px-5 bg-slate-200 w-28 h-8 rounded-lg"
           >
             <img src="./assets/coin.png" alt="" />
             <span id="previous-amount">0</span>BDT
@@ -73,12 +94,11 @@
             class="w-full border px-8 py-5 rounded-xl text-3xl font-bold my-8"
             id="donate-amount"
             placeholder="write donation amount"
-            type="text"
+            type="number"
           />
           <p>
             <button
               class="w-full bg-lime-300 px-8 py-5 rounded-xl text-3xl font-bold"
-              onclick="my_modal_5.showModal()"
               id="donate-btn"
             >
               Donate Now
@@ -107,13 +127,19 @@
 
       <!-- 2nd card start -->
 
-      <section class="flex justify-between gap-10 border rounded-xl m-5">
-        <div class="w-6/12">
-          <img class="w-11/12 m-5" src="./assets/feni.png" alt="" />
+      <section
+        class="flex flex-col lg:flex-row lg:justify-between gap-10 border rounded-xl lg:m-5"
+      >
+        <div class="w-full lg:w-6/12">
+          <img
+            class="w-full lg:w-11/12 lg:m-5"
+            src="./assets/feni.png"
+            alt=""
+          />
         </div>
-        <div class="w-6/12 m-5">
+        <div class="w-full lg:w-6/12 lg:m-5">
           <button
-            class="flex justify-center items-center gap-2 px-5 bgc w-28 h-8 rounded-lg"
+            class="flex justify-center items-center gap-2 px-5 w-28 h-8 rounded-lg"
           >
             <img src="./assets/coin.png" alt="" />
             <span id="previous-amount-1">0</span>BDT
@@ -133,11 +159,10 @@
             id="donate-amount-1"
             class="w-full border px-8 py-5 rounded-xl text-3xl font-bold my-8"
             placeholder="write donation amount"
-            type="text"
+            type="number"
           />
           <p>
             <button
-              onclick="my_modal_5.showModal()"
               class="w-full bg-lime-300 px-8 py-5 rounded-xl text-3xl font-bold"
               id="donate-btn-1"
             >
@@ -147,13 +172,19 @@
         </div>
       </section>
       <!-- 3rd cart start -->
-      <section class="flex justify-between gap-10 border rounded-xl m-5">
-        <div class="w-6/12">
-          <img class="w-11/12 m-5" src="./assets/quota-protest.png" alt="" />
+      <section
+        class="flex flex-col lg:flex-row lg:justify-between gap-10 border rounded-xl lg:m-5"
+      >
+        <div class="w-full lg:w-6/12">
+          <img
+            class="lg:w-11/12 lg:m-5"
+            src="./assets/quota-protest.png"
+            alt=""
+          />
         </div>
-        <div class="w-6/12 m-5">
+        <div class="lg:w-6/12 lg:m-5">
           <button
-            class="flex justify-center items-center gap-2 px-5 bgc w-28 h-8 rounded-lg"
+            class="flex justify-center items-center gap-2 px-5 w-28 h-8 rounded-lg"
           >
             <img src="./assets/coin.png" alt="" />
             <span id="previous-amount-2">0</span>BDT
@@ -177,7 +208,6 @@
           />
           <p>
             <button
-              onclick="my_modal_5.showModal()"
               class="w-full bg-lime-300 px-8 py-5 rounded-xl text-3xl font-bold"
               id="donate-btn-2"
             >
@@ -186,37 +216,6 @@
           </p>
         </div>
       </section>
-      <!-- accordian start -->
-      <section>
-        <div class="collapse collapse-arrow border py-8 px-5">
-          <input type="radio" name="my-accordion-2" checked="checked" />
-          <div class="collapse-title text-xl font-medium">
-            Click to open this one and close others
-          </div>
-          <div class="collapse-content">
-            <p>hello</p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow border py-8 px-5">
-          <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title text-xl font-medium">
-            Click to open this one and close others
-          </div>
-          <div class="collapse-content">
-            <p>hello</p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow border py-8 px-5">
-          <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title text-xl font-medium">
-            Click to open this one and close others
-          </div>
-          <div class="collapse-content">
-            <p>hello</p>
-          </div>
-        </div>
-      </section>
-      <!-- accordian end -->
     </main>
 
     <!-- history section -->

@@ -1,20 +1,35 @@
+function getInputValueById(id) {
+  const value = parseFloat(document.getElementById(id).value);
+  return value;
+}
+function getTextValueById(id) {
+  const textValue = parseFloat(document.getElementById(id).innerText);
+  return textValue;
+}
+// common function start
+//
 const donateButton = document.getElementById("donate-btn");
 donateButton.addEventListener("click", function () {
-  const donateAmount = parseFloat(
-    document.getElementById("donate-amount").value
-  );
-  console.log(donateAmount);
-  const previousAmount = parseFloat(
-    document.getElementById("previous-amount").innerText
-  );
-  console.log(previousAmount);
-  const reserveAmount = parseFloat(
-    document.getElementById("reserve-amount").innerText
-  );
+  const donateAmount = getInputValueById("donate-amount");
+  const previousAmount = getTextValueById("previous-amount");
+  const reserveAmount = getTextValueById("reserve-amount");
+  // validation start
+  if (
+    donateAmount <= 0 ||
+    isNaN(donateAmount) ||
+    donateAmount > reserveAmount
+  ) {
+    alert("Donate must be a valid nunber");
+    return;
+  } else {
+    document.getElementById("my_modal_5").showModal();
+  }
+
+  // validation end
   const remainingBalane = reserveAmount - donateAmount;
   document.getElementById("reserve-amount").innerText = remainingBalane;
   const afterDonationAmount = previousAmount + donateAmount;
-  console.log(afterDonationAmount);
+
   document.getElementById("previous-amount").innerText = afterDonationAmount;
 
   //history section
@@ -55,19 +70,23 @@ donationTab.addEventListener("click", function () {
 // 2nd card functionality
 const donateButton1 = document.getElementById("donate-btn-1");
 donateButton1.addEventListener("click", function () {
-  const donateAmount1 = parseFloat(
-    document.getElementById("donate-amount-1").value
-  );
-
-  const previousAmount1 = parseFloat(
-    document.getElementById("previous-amount-1").innerText
-  );
-
-  const reserveAmount1 = parseFloat(
-    document.getElementById("reserve-amount").innerText
-  );
+  const donateAmount1 = getInputValueById("donate-amount-1");
+  const previousAmount1 = getTextValueById("previous-amount-1");
+  const reserveAmount1 = getTextValueById("reserve-amount");
   const remainingBalane1 = reserveAmount1 - donateAmount1;
   document.getElementById("reserve-amount").innerText = remainingBalane1;
+  // validation start
+  if (
+    donateAmount1 <= 0 ||
+    isNaN(donateAmount1) ||
+    donateAmount1 > reserveAmount1
+  ) {
+    alert("Donate must be a valid nunber");
+    return;
+  } else {
+    document.getElementById("my_modal_5").showModal();
+  }
+  // validation end
   const afterDonationAmount1 = previousAmount1 + donateAmount1;
 
   document.getElementById("previous-amount-1").innerText = afterDonationAmount1;
@@ -88,17 +107,21 @@ donateButton1.addEventListener("click", function () {
 // 3rd card functionality
 const donateButton2 = document.getElementById("donate-btn-2");
 donateButton2.addEventListener("click", function () {
-  const donateAmount2 = parseFloat(
-    document.getElementById("donate-amount-2").value
-  );
-
-  const previousAmount2 = parseFloat(
-    document.getElementById("previous-amount-2").innerText
-  );
-
-  const reserveAmount2 = parseFloat(
-    document.getElementById("reserve-amount").innerText
-  );
+  const donateAmount2 = getInputValueById("donate-amount-2");
+  const previousAmount2 = getTextValueById("previous-amount-2");
+  const reserveAmount2 = getTextValueById("reserve-amount");
+  // validation start
+  if (
+    donateAmount2 <= 0 ||
+    isNaN(donateAmount2) ||
+    donateAmount2 > reserveAmount2
+  ) {
+    alert("Donate must be a valid nunber");
+    return;
+  } else {
+    document.getElementById("my_modal_5").showModal();
+  }
+  // validation end
   const remainingBalane2 = reserveAmount2 - donateAmount2;
   document.getElementById("reserve-amount").innerText = remainingBalane2;
   const afterDonationAmount2 = previousAmount2 + donateAmount2;
@@ -116,4 +139,8 @@ donateButton2.addEventListener("click", function () {
   `;
   const historyContainer = document.getElementById("history-list");
   historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+});
+// blog page redirect
+document.getElementById("blog-page").addEventListener("click", function () {
+  window.location.href = "/blog.html";
 });

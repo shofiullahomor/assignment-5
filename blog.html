@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <!-- lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav
+      class="sticky top-0 z-10 bg-slate-200 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b"
+    >
+      <div class="py-8 container mx-auto border-gray-200 flex justify-between">
+        <div class="" id="home-page">
+          <a href="index.html" class="btn btn-ghost text-xl bg-lime-300 px-8"
+            >Home</a
+          >
+        </div>
+        <div class="hidden lg:flex">
+          <img class="" src="./assets/logo.png" alt="" />
+          <h1 class="ml-4 text-2xl font-bold">Donate Bangladesh</h1>
+        </div>
+        <div class="flex justify-between">
+          <img src="./assets/coin.png" alt="" />
+          <p class="ml-4 text-2xl font-bold" id="reserve-amount">5500 BDT</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- nav end -->
+    <main class="mt-20 mb-8 container mx-auto">
+      <!-- accordian start -->
+      <section>
+        <div class="flex gap-4 container my-10">
+          <h1 class="text-6xl font-bold">Important FAQ</h1>
+          <img class="w-20 h-20 ml-4 mb-4" src="./assets/chat.png" alt="" />
+        </div>
+        <div class="collapse collapse-arrow border py-8 px-5">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-2xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content text-xl">
+            <p>
+              The Document Object Model is a programming API for documents. The
+              object model itself closely resembles the structure of the
+              documents it models
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border py-8 px-5">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-2xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content text-xl">
+            <p>
+              DOM Selectors, as the name suggests is used to select HTML
+              elements within a document using JavaScript. There are 5 ways in
+              which you can select elements in a DOM using selectors.
+            </p>
+            <p><span>1-</span>getElementsByTagName()</p>
+            <p><span>2-</span>getElementsByClassName()</p>
+            <p><span>3-</span>getElementById()</p>
+            <p><span>4-</span>querySelector()</p>
+            <p><span>5-</span>querySelectorAll()</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border py-8 px-5">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-2xl font-medium">
+            What is event delegation in the context of the DOM, and why it is
+            useful?
+          </div>
+          <div class="collapse-content text-xl">
+            <p>
+              Event delegation in JavaScript is a pattern that efficiently
+              handles events. Events can be added to a parent element instead of
+              adding to every single element. It refers to the process of using
+              event propagation (bubbling) to handle events at a higher level in
+              the DOM than the element on which the event originated. This can
+              be done on a particular target element using the .target property
+              of an event object.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border py-8 px-5">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-2xl font-medium">
+            How do you manipulate an Element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content text-xl">
+            <h1>
+              There are multiple methods available in DOM to select the HTML
+              elements and manipulate them as listed below:
+            </h1>
+
+            <ol type="1">
+              <li>
+                querySelector() method: The querySelector( ) method is used to
+                select the first element that matches the specified selector
+                provided as an argument.
+              </li>
+              <li>
+                <span>1-</span>
+                querySelectorAll() method: The querySelectorAll() method returns
+                a NodeList which contains all elements that match the selector
+                within the document.
+              </li>
+              <li>
+                <span>2-</span>
+                getElementById( ) method: The getElementId() method is used to
+                select a single element using its Id.
+              </li>
+              <li>
+                <span>3-</span>
+                getElementByClassName( ): The getElementsByClassName() method in
+                JavaScript is used to select elements in the HTML document that
+                have a specific class name.
+              </li>
+              <li>
+                <span>4-</span>
+                getElementByTagName() method: The getElementsByTagName() method
+                is used to select elements using the specified tag name.
+              </li>
+              <li>
+                <span>5-</span>
+                getElementByName() method: The getElementsByName() method is
+                used to select elements that have a specific name attribute.
+                This method returns a NodeList of elements with the specified
+                name.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- accordian end -->
+    </main>
+
+    <!-- footer section -->
+    <footer class="h-32 bg-slate-300"></footer>
+    <script src="./js/donate.js"></script>
+  </body>
+</html>
